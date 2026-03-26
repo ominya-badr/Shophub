@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('header')
     <!-- Hero Section -->
+<<<<<<< HEAD
     <header class="d-flex align-items-center text-center text-white"
         style="
     min-height: 100vh;
@@ -20,6 +21,32 @@
             <a href="{{ route('home-products') }}" class="btn btn-primary px-5 py-2">
                 Shop Now
             </a>
+=======
+   <header class="d-flex justify-content-center align-items-center text-center"
+        style="
+        min-height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+        url('{{ asset('imgs/iphone15.jpg') }}') center/cover no-repeat;
+    ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+
+                    <h1 class="text-light fw-bolder display-4 display-md-3 display-lg-2">
+                        <span class="text-primary">ShopHub</span> Website
+                    </h1>
+
+                    <p class="text-white-50 mt-3 mb-4 fs-6 fs-md-5 fs-lg-4">
+                        Modern Electronics Website
+                    </p>
+
+                    <a href="{{ route('home-about') }}" class="btn btn-primary px-4 py-2">
+                        Learn More
+                    </a>
+
+                </div>
+            </div>
+>>>>>>> a4c64d6635120cc810560ef5da323c0d5603408c
         </div>
     </header>
 @endsection
@@ -52,9 +79,14 @@
                             </div>
                             <p class="card-text text-muted flex-grow-1">{{ Str::limit($product->description, 100) }}</p>
                             <p class="text-light badge text-bg-primary align-self-start">{{ $product->category->name }}</p>
+<<<<<<< HEAD
                             <a href="{{ route('home-product', $product) }}" class="btn btn-outline-primary mt-3">View
                                 Details</a>
                             <a href="{{ route('add.to.cart', $product) }}" class="btn btn-outline-dark mt-2">Add to
+=======
+                            <a href="{{ route('home-product', $product) }}" class="btn btn-outline-primary mt-3">show</a>
+                            <a href="{{ route('add.to.cart', $product) }}" class="btn btn-outline-secondary mt-3">Add To
+>>>>>>> a4c64d6635120cc810560ef5da323c0d5603408c
                                 Cart</a>
                         </div>
                     </div>
