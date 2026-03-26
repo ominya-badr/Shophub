@@ -1,13 +1,30 @@
 @extends('layouts.layout')
 @section('header')
     <!-- Hero Section -->
-    <header
-        style="background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url('{{ asset('imgs/iphone15.jpg') }}') center/cover no-repeat;height:93vh;"
-        class="d-flex justify-content-center align-items-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-light fs-1 fw-bolder"><span class="text-primary">ShopHub</span> Website</h1>
-            <p class="text-white-50 pt-2">Modern Electronics Website</p>
-            <a href="{{ route('home-about') }}" class="btn btn-primary">Learn More</a>
+   <header class="d-flex justify-content-center align-items-center text-center"
+        style="
+        min-height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+        url('{{ asset('imgs/iphone15.jpg') }}') center/cover no-repeat;
+    ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+
+                    <h1 class="text-light fw-bolder display-4 display-md-3 display-lg-2">
+                        <span class="text-primary">ShopHub</span> Website
+                    </h1>
+
+                    <p class="text-white-50 mt-3 mb-4 fs-6 fs-md-5 fs-lg-4">
+                        Modern Electronics Website
+                    </p>
+
+                    <a href="{{ route('home-about') }}" class="btn btn-primary px-4 py-2">
+                        Learn More
+                    </a>
+
+                </div>
+            </div>
         </div>
     </header>
 @endsection
@@ -42,7 +59,7 @@
                             <p class="text-light badge text-bg-primary align-self-start">{{ $product->category->name }}</p>
                             <a href="{{ route('home-product', $product) }}" class="btn btn-outline-primary mt-3">show</a>
                             <a href="{{ route('add.to.cart', $product) }}" class="btn btn-outline-secondary mt-3">Add To
-                                Card</a>
+                                Cart</a>
                         </div>
                     </div>
                 </div>
