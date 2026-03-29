@@ -21,8 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
-    Route::get('add-to-cart/{id}', [CartController::class,'addAtCart'])->name('add.to.cart');
-    Route::get('/cart', [CartController::class,'cart'])->name('cart');
     Route::post('/cart-update', [CartController::class,'cartUpdate'])->name('cart.update');
     Route::post('/order', [CartController::class,'order'])->name('order.post');
     Route::get('/order-success', [CartController::class,'orderSuccess'])->name('order.success');
@@ -39,4 +37,6 @@ Route::get('/home/contact', [HomeController::class, 'contact'])->name('home-cont
 Route::get('/home/product/{id}', [HomeController::class, 'product'])->name('home-product');
 Route::get('/home/category/{id}', [HomeController::class, 'category'])->name('category.filter');
 Route::post('/message', [ContactController::class, 'contactMessage'])->name('contact.message');
+Route::get('add-to-cart/{id}', [CartController::class,'addAtCart'])->name('add.to.cart');
+Route::get('/cart', [CartController::class,'cart'])->name('cart');
 require __DIR__ . '/auth.php';

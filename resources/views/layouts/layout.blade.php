@@ -193,3 +193,4 @@
 @yield('scripts')
 
 </html>
+

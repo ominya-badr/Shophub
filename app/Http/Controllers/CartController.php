@@ -114,6 +114,8 @@ class CartController extends Controller
             $order->stripe_id = $session->id;
             $order->save();
 
+            session()->forget('cart');
+
             return redirect()->route('home')->with('success', 'Order Placed');
         }
         $order = Order::find($request->order_id);

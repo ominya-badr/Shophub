@@ -20,7 +20,7 @@ class LoginController extends Controller
      */
     public function redirectPath()
     {
-        return '/';
+        return redirect()->intended('/');
     }
 
     /**
@@ -28,6 +28,6 @@ class LoginController extends Controller
      */
     protected function loggedOut(Request $request)
     {
-        return redirect('/');
+        redirect()->route('/');
     }
 }
