@@ -14,7 +14,7 @@
                 </div>
                 <p class="card-text text-muted flex-grow-1">{{ Str::limit($product->description, 100) }}</p>
                 <p class="text-light badge text-bg-primary align-self-start">{{ $product->category->name }}</p>
-                <a href="{{ route('home') }}" class="btn btn-outline-primary mt-3">Back</a>
+                <a href="{{ route('home-products') }}" class="btn btn-outline-primary mt-3">Back</a>
                 <a href="{{ route('add.to.cart', $product) }}" class="btn btn-outline-secondary mt-3">Add To Cart</a>
             </div>
         </div>
